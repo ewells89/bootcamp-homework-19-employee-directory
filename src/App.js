@@ -1,7 +1,9 @@
+import EmployeeTable from './components/EmployeeTable/EmployeeTable'
 function App() {
   return (
     <div class="container">
-      <h1>Hello World.</h1>
+      <EmployeeTable />
+
     </div>
   );
 }

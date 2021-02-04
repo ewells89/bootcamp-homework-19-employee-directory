@@ -5,34 +5,25 @@ const EmployeeTable = () => {
         <table className="table table-dark table-striped">
             <thead>
                 <tr>
-                <th scope="col">#</th>
+                <th scope="col">ID</th>
+                <th scope="col">Photo</th>
                 <th scope="col">First</th>
                 <th scope="col">Last</th>
-                <th scope="col">Handle</th>
+                <th scope="col">Email</th>
+                <th scope="col">Phone</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                <th scope="row">1</th>
+                <th scope="row">23079443468</th>
                 <td>Mark</td>
-                <td>Otto</td>
-                <td>@mdo</td>
-                </tr>
-                <tr>
-                <th scope="row">2</th>
-                <td>Jacob</td>
-                <td>Thornton</td>
-                <td>@fat</td>
-                </tr>
-                <tr>
-                <th scope="row">3</th>
-                <td colspan="2">Larry the Bird</td>
-                <td>@twitter</td>
+                <td>Erika</td>
+                <td>Persen</td>
+                <td>erika.persen@example.com</td>
+                <td>84674950</td>
                 </tr>
             </tbody>
         </table>
-
-
     );
 };
 
