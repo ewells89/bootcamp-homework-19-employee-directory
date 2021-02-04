@@ -18,7 +18,7 @@ To access a copy of the repository for local use:
 * Otherwise, open the repository using your preferred IDE.
 
 ### Preview
-![](public\screenshot-of-app.png)
+![screenshot](public\screenshot-of-app.png)
 
 ---
 ## Credits
