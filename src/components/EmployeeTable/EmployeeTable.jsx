@@ -3,6 +3,7 @@ import axios from "axios";
 
 const EmployeeTable = () => {
   const [users, setUsers] = useState([]);
+  const [sortDirection, setSortDirection] = useState("asc");
 
     useEffect(() => {
         axios.get("https://randomuser.me/api/?results=100").then(response => {
@@ -15,6 +16,30 @@ const EmployeeTable = () => {
     }
 
     const sortLastName = () => {
+        if(sortDirection ==="asc"){
+            sortLastNameAsc();
+            setSortDirection("desc");
+        }else{
+            sortLastNameDesc();
+            setSortDirection("asc");
+        }
+    };
+
+    const sortLastNameDesc = () => {
+        const usersSpread = [...users]
+        usersSpread.sort((a,b) => {
+            const nameA = a.name.last;
+            const nameB = b.name.last;
+
+            if (nameA > nameB) return -1;
+            if (nameA < nameB) return 1;
+            return 0;
+        });
+        console.log(usersSpread);
+        setUsers(usersSpread);
+    };
+
+    const sortLastNameAsc = () => {
         const usersSpread = [...users]
         usersSpread.sort((a,b) => {
             const nameA = a.name.last;
