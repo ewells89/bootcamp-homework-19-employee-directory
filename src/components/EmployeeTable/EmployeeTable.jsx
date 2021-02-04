@@ -5,14 +5,14 @@ const EmployeeTable = () => {
   const [users, setUsers] = useState([]);
   const [sortDirection, setSortDirection] = useState("asc");
   const [searchTerm, setSearchTerm] = useState("");
+  const [usersToDisplay, setUsersToDisplay] = useState([]);
 
   useEffect(() => {
     axios.get("https://randomuser.me/api/?results=100").then((response) => {
       setUsers(response.data.results);
+      setUsersToDisplay(response.data.results);
     });
   }, []);
-
-  const filterEmail = () => {};
 
   const sortLastName = () => {
     if (sortDirection === "asc") {
@@ -34,7 +34,7 @@ const EmployeeTable = () => {
       if (nameA < nameB) return 1;
       return 0;
     });
-    setUsers(usersSpread);
+    setUsersToDisplay(usersSpread);
   };
 
   const sortLastNameAsc = () => {
@@ -47,22 +47,34 @@ const EmployeeTable = () => {
       if (nameA > nameB) return 1;
       return 0;
     });
-    setUsers(usersSpread);
+    setUsersToDisplay(usersSpread);
   };
+
+  const handleSubmit = (e) => {
+      e.preventDefault();
+    const filteredUsers = users.filter((user) => {
+        return user.phone.includes(searchTerm)
+    });
+    setUsersToDisplay(filteredUsers);
+  }
+
+
 
   return (
     <div>
       <div className="text-end">
-        <input 
-          type="text"
-          placeholder="Search by phone number"
-          name="searchTerm"
-          value={searchTerm}
-          onChange={(e) => {
-            setSearchTerm(e.target.value);
-          }}
-        ></input>
-        <button className="btn btn-dark btn-sm">Search</button>
+          <form onSubmit={handleSubmit}>
+            <input 
+            type="text"
+            placeholder="Search by phone number"
+            name="searchTerm"
+            value={searchTerm}
+            onChange={(e) => {
+                setSearchTerm(e.target.value);
+            }}
+            ></input>
+            <button className="btn btn-dark btn-sm">Search</button>
+        </form>
       </div>
       <div>
         <table className="table table-dark table-striped">
@@ -79,8 +91,8 @@ const EmployeeTable = () => {
             </tr>
           </thead>
           <tbody>
-            {users.map((user) => (
-              <tr>
+            {usersToDisplay.map((user) => (
+              <tr key="index">
                 <th scope="row">{user.id.value}</th>
                 <td>
                   <img
