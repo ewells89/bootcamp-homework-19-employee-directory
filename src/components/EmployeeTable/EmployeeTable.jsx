@@ -11,6 +11,32 @@ const EmployeeTable = () => {
         })
     }, []);
 
+    const filterEmail = () => {
+
+    }
+
+    const sortLastName = () => {
+        const sortedNames = users.sort((a,b) => {
+            const nameA = a.name.last;
+            const nameB = b.name.last;
+
+            if (nameA < nameB) return -1;
+            if (nameA > nameB) return 1;
+            return 0;
+        });
+        console.log(sortedNames);
+    }
+    // arr.sort(function(a, b) {
+    //     var keyA = new Date(a.updated_at),
+    //       keyB = new Date(b.updated_at);
+    //     // Compare the 2 dates
+    //     if (keyA < keyB) return -1;
+    //     if (keyA > keyB) return 1;
+    //     return 0;
+    //   });
+      
+
+
   return (
     <table className="table table-dark table-striped">
       <thead>
@@ -18,7 +44,7 @@ const EmployeeTable = () => {
           <th scope="col">ID</th>
           <th scope="col">Photo</th>
           <th scope="col">First</th>
-          <th scope="col">Last</th>
+          <th scope="col" onClick={sortLastName}>Last</th>
           <th scope="col">Email</th>
           <th scope="col">Phone</th>
         </tr>
