@@ -12,11 +12,11 @@ const EmployeeTable = () => {
     }, []);
 
     const filterEmail = () => {
-
     }
 
     const sortLastName = () => {
-        const sortedNames = users.sort((a,b) => {
+        const usersSpread = [...users]
+        usersSpread.sort((a,b) => {
             const nameA = a.name.last;
             const nameB = b.name.last;
 
@@ -24,18 +24,9 @@ const EmployeeTable = () => {
             if (nameA > nameB) return 1;
             return 0;
         });
-        console.log(sortedNames);
-    }
-    // arr.sort(function(a, b) {
-    //     var keyA = new Date(a.updated_at),
-    //       keyB = new Date(b.updated_at);
-    //     // Compare the 2 dates
-    //     if (keyA < keyB) return -1;
-    //     if (keyA > keyB) return 1;
-    //     return 0;
-    //   });
-      
-
+        console.log(usersSpread);
+        setUsers(usersSpread);
+    };
 
   return (
     <table className="table table-dark table-striped">

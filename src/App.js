@@ -1,7 +1,7 @@
 import EmployeeTable from './components/EmployeeTable/EmployeeTable'
 function App() {
   return (
-    <div class="container">
+    <div className="container">
       <EmployeeTable />
 
     </div>
