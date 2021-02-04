@@ -10,12 +10,15 @@ The purpose of this assignment is to create a React application that takes in da
 ---
 ## Usage
 
-To view the live site click [here]().
+To view the live site click [here](https://ewells89.github.io/bootcamp-homework-19-employee-directory/).
 
 To access a copy of the repository for local use:
 * Download a copy of the repository by performing a git pull onto your local machine.
 * Install the dependent NPM packages and enter the 'npm start' command.
 * Otherwise, open the repository using your preferred IDE.
+
+### Preview
+![](public\screenshot-of-app.png)
 
 ---
 ## Credits
