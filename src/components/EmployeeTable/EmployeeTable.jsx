@@ -76,17 +76,17 @@ const EmployeeTable = () => {
       <tbody>
         {users.map((user) =>(
             <tr>
-            <th scope="row">23079443468</th>
+            <th scope="row">{user.id.value}</th>
             <td>
               <img
-                src="https://randomuser.me/api/portraits/thumb/women/52.jpg"
+                src={user.picture.thumbnail}
                 alt="thumbnail for user"
               ></img>
             </td>
-            <td>Erika</td>
-            <td>Persen</td>
-            <td>erika.persen@example.com</td>
-            <td>84674950</td>
+            <td>{user.name.first}</td>
+            <td>{user.name.last}</td>
+            <td>{user.email}</td>
+            <td>{user.phone}</td>
           </tr>
         ))}
       </tbody>
