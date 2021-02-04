@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.js": "/bootcamp-homework-19-employee-directory/static/js/main.239f6afe.chunk.js",
+    "main.js.map": "/bootcamp-homework-19-employee-directory/static/js/main.239f6afe.chunk.js.map",
+    "runtime-main.js": "/bootcamp-homework-19-employee-directory/static/js/runtime-main.7a9c7cc9.js",
+    "runtime-main.js.map": "/bootcamp-homework-19-employee-directory/static/js/runtime-main.7a9c7cc9.js.map",
+    "static/js/2.2d4a5f0a.chunk.js": "/bootcamp-homework-19-employee-directory/static/js/2.2d4a5f0a.chunk.js",
+    "static/js/2.2d4a5f0a.chunk.js.map": "/bootcamp-homework-19-employee-directory/static/js/2.2d4a5f0a.chunk.js.map",
+    "static/js/3.d45dcec6.chunk.js": "/bootcamp-homework-19-employee-directory/static/js/3.d45dcec6.chunk.js",
+    "static/js/3.d45dcec6.chunk.js.map": "/bootcamp-homework-19-employee-directory/static/js/3.d45dcec6.chunk.js.map",
+    "index.html": "/bootcamp-homework-19-employee-directory/index.html",
+    "static/js/2.2d4a5f0a.chunk.js.LICENSE.txt": "/bootcamp-homework-19-employee-directory/static/js/2.2d4a5f0a.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.7a9c7cc9.js",
+    "static/js/2.2d4a5f0a.chunk.js",
+    "static/js/main.239f6afe.chunk.js"
+  ]
+}
